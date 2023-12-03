@@ -35,11 +35,11 @@ public class EmployeeController {
     public Employee findEmployee(@RequestParam String name, @RequestParam String surname) {
         return employeeService.findEmployee(name, surname);
     }
-
+/*
  @GetMapping("/departments")
  public String printDepartmentsAndNames() {
      return employeeService.printAllDepartmentsAndNames();
- }
+ }*/
 
     @GetMapping()
     public Collection showEmployee() {

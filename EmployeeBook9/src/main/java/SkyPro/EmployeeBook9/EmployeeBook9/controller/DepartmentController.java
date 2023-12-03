@@ -30,7 +30,7 @@ public class DepartmentController {
     }
 
     @GetMapping(path = "/max-salary")
-    public Employee EmployeeMaxSalary(@RequestParam int departmentID){
+    public Employee EmployeeMaxSalary(@RequestParam int departmentID) {
         return departmentService.findMaxSalaryByDepartment(departmentID);
     }
 

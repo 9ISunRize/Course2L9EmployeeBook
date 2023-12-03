@@ -1,6 +1,9 @@
 package SkyPro.EmployeeBook9.EmployeeBook9.service;
 
 
+import SkyPro.EmployeeBook9.EmployeeBook9.expectoin.EmployeeAlreadyAddedException;
+import SkyPro.EmployeeBook9.EmployeeBook9.expectoin.EmployeeNotFoundException;
+import SkyPro.EmployeeBook9.EmployeeBook9.expectoin.MaximumEmployeesException;
 import SkyPro.EmployeeBook9.EmployeeBook9.model.Employee;
 import org.springframework.stereotype.Service;
 
@@ -34,7 +37,7 @@ public class EmployeeServiceImpl implements EmployeeService {
         } else if (employeeMap.size() > MAX_EMPLOYEES) {
             throw new MaximumEmployeesException("Максимальное количество сотрудников");
         }
-        throw new EmployeeAlreadyAdded("Такой сотрудник уже существует");
+        throw new EmployeeAlreadyAddedException("Такой сотрудник уже существует");
     }
 
     @Override
